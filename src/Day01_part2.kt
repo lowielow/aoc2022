@@ -1,6 +1,6 @@
 fun main() {
 
-    fun part1(input: List<String>): Int {
+    fun part2(input: List<String>): Int {
         val listOne: MutableList<Int> = mutableListOf<Int>()
         var currentSum = 0
         val inputSize: Int = input.size
@@ -17,6 +17,6 @@ fun main() {
     }
 
     val input = readInput("Day01")
-    part1(input).println()
+    part2(input).println()
 
 }
