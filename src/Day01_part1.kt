@@ -1,17 +1,23 @@
 fun main() {
+
     fun part1(input: List<String>): Int {
-        return input.size
+        var largestSum: Int = 0
+        var currentSum: Int = 0
+        val inputSize: Int = input.size
+        for (i in 0 until inputSize) {
+            if (input[i].isEmpty()) {
+                if (currentSum > largestSum) {
+                    largestSum = currentSum
+                }
+                currentSum = 0
+            } else {
+                currentSum += input[i].toInt()
+            }
+        }
+        return largestSum
     }
-
-    fun part2(input: List<String>): Int {
-        return input.size
-    }
-
-    // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day01_test")
-    check(part1(testInput) == 1)
 
     val input = readInput("Day01")
     part1(input).println()
-    part2(input).println()
+
 }
