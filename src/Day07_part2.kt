@@ -34,7 +34,7 @@ fun handleDirConversion(dir: MutableList<String>, list: MutableList<MutableList<
     var count = calcDirCount(list)
     while (true) {
         for (i in list.size - 1 downTo 0) {
-            loop@for (j in list[i].indices step 2) {
+            for (j in list[i].indices step 2) {
                 if (list[i][j] == "dir") {
                     var newValue = 0
                     var k = 0
